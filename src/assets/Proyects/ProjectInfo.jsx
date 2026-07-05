@@ -1,6 +1,6 @@
 export const ProjectInfo = () => {
     return (
-        <div className="shadow-[0_0_3px_#fa9bb9] rounded-xl p-7 w-full flex flex-col gap-6">
+        <div className=" p-7 w-full flex flex-col gap-6 border-y-1 border-[var(--primary-color)]">
 
             <div>
 

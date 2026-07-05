@@ -4,9 +4,11 @@ import { ProjectInfo } from "./ProjectInfo";
 
 export const Proyects = () => {
     return (
-        <main className="pt-15 pb-10">
-
-            <div className="flex flex-col items-center gap-3">
+        <main className="pt-15 pb-10 relative ">
+            <div className="-z-20 absolute inset-0 opacity-30 ">
+                <img className=" h-full" src="./PROYECTOS/fondo2.svg" alt="" />
+            </div>
+            <div className="flex flex-col items-center gap-3 pb-10">
 
                 <div className="flex gap-5 items-center justify-center">
 
@@ -29,7 +31,7 @@ export const Proyects = () => {
             </div>
 
 
-            <section className="flex flex-col lg:grid lg:grid-cols-[1fr_2fr]">
+            <section className="flex flex-col lg:grid lg:grid-cols-[1fr_1.7fr]">
 
 
                 <ProjectList />

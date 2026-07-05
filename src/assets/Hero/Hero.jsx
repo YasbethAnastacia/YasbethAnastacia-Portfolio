@@ -1,4 +1,4 @@
-import { ChevronRight, Mail } from "lucide-react";
+import { ChevronRight, Mail,  } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const tecnologias = [
@@ -52,7 +52,7 @@ export const Hero = () => {
 
 
     return (
-        <main className="grid grid-cols-[1.5fr_1fr] items-center  overflow-hidden px-18  ">
+        <main className="relative grid grid-cols-[1.5fr_1fr] items-center overflow-hidden px-18 py-10">
         
 
             {/* IZQUIERDA animate-pulse*/}
@@ -135,16 +135,17 @@ export const Hero = () => {
             <div className="  z-10 w-[500px] h-[620px] rounded-[40px] bg-pink-100  overflow-hidden rounded-full shadow-2xl">
                 <img className="object-cover rounded-full" src="./HERO/foto-personal.png" alt="" draggable={false}/>
             </div>
-
+                    
             
 
             </div>
 {/* Onda */}
-<div className="-z-10 absolute bottom-0 left-0 w-full pointer-events-none">
+<div className="absolute bottom-0 left-0 w-full -z-10 pointer-events-none">
     <svg
         className="block w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
     >
         <path
             fill="#fa9bb9"
