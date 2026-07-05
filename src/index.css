@@ -3,6 +3,63 @@
 :root{
     --primary-color: #fa9bb9;
     --secondary-color: #f08bad15;
-    --secondary-color2: #f08bad2f;
-    --primary-font:#f48bac;
+    --primary-color-background: #f396b30e;
+    --background:#FFF8F8;
+    --m:#ffffff
 }
+
+
+
+body{
+    background-color: var(--background);
+}
+
+
+@keyframes wave {
+    0%   { transform: rotate(0deg); }
+    15%  { transform: rotate(14deg); }
+    30%  { transform: rotate(-8deg); }
+    45%  { transform: rotate(14deg); }
+    60%  { transform: rotate(-4deg); }
+    75%  { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.wave {
+    display: inline-block;
+    transform-origin: 70% 70%; /* Hace que gire desde la muñeca */
+    animation: wave 1.5s ease-in-out infinite;
+}
+
+/*EFECTO GOMITA
+
+@keyframes gummy {
+    0%,100% {
+        transform: scale(1,1);
+    }
+    25% {
+        transform: scale(1.12,0.88);
+    }
+    50% {
+        transform: scale(0.94,1.06);
+    }
+    75% {
+        transform: scale(1.08,0.92);
+    }
+}
+   **/
+
+@keyframes gummyArrow {
+    0%,100% {
+        transform: scale(1,1);
+    }
+    30% {
+        transform: scaleX(1.18) scaleY(.82);
+    }
+    60% {
+        transform: scaleX(.92) scaleY(1.08);
+    }
+}
+
+
+   

@@ -1,11 +1,13 @@
 import { Hero } from "./assets/Hero/Hero";
-
+import { Proyects } from "./assets/Proyects/proyects";
 function App() {
   return (
-    <>
+    <main className="select-none">
       <Hero />
+      
+      <Proyects />
 
-    </>
+    </main>
   );
 }
 
