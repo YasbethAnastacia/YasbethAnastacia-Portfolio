@@ -19,7 +19,7 @@ const tecnologias = [
 
 
 
-const CroshAmigurumisFotos = [
+/*const CroshAmigurumisFotos = [
     "/PROYECTOS/croshamigurumis/hero.png",
     "/PROYECTOS/croshamigurumis/intereses.png",
     "/PROYECTOS/croshamigurumis/intereses-carrusel.png",
@@ -32,12 +32,25 @@ const CroshAmigurumisFotos = [
     "/PROYECTOS/croshamigurumis/contactame2.png",
 ]
 
-const ProyectosInformacion=[
+export const ProyectosInformacion=[
     {
         id:1,
         nombre:"Crosh Amigurumis",
         descripcion:"Crosh Amigurumis es un proyecto de emprendimiento que se dedica a la creación y venta de amigurumis, que son muñecos tejidos a mano utilizando la técnica del crochet. Estos amigurumis son conocidos por su diseño adorable y detallado, y pueden representar una variedad de personajes, animales y objetos. El proyecto busca ofrecer productos únicos y personalizados para los amantes de los amigurumis y aquellos que buscan regalos especiales.",
         fotos: CroshAmigurumisFotos,
+        tecnologias:[[1,2,4]],
+        link:"https://croshamigurumis.com/",
+        github:"https://github.com/croshamigurumis"
+    }
+]**/
+
+
+export const ProyectosInformacion=[
+    {
+        id:1,
+        nombre:"Crosh Amigurumis",
+        descripcion:"Crosh Amigurumis es un proyecto de emprendimiento que se dedica a la creación y venta de amigurumis, que son muñecos tejidos a mano utilizando la técnica del crochet. Estos amigurumis son conocidos por su diseño adorable y detallado, y pueden representar una variedad de personajes, animales y objetos. El proyecto busca ofrecer productos únicos y personalizados para los amantes de los amigurumis y aquellos que buscan regalos especiales.",
+        fotos: "/PROYECTOS/croshamigurumis/total.png",
         tecnologias:[[1,2,4]],
         link:"https://croshamigurumis.com/",
         github:"https://github.com/croshamigurumis"

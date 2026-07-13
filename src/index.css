@@ -62,4 +62,30 @@ body{
 }
 
 
-   
+
+
+
+/* <img
+        ref={imagenRef}
+        src="./PROYECTOS/croshamigurumis/total.png"
+        alt=""
+        className="w-full h-auto animate-scroll"
+        draggable={false}
+        onLoad={handleImageLoad}
+    />
+                    
+    @keyframes scrollPage {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-90%);
+    }
+}
+
+.animate-scroll {
+    animation: scrollPage 20s linear infinite alternate;
+}**/
+
+

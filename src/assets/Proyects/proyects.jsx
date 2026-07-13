@@ -4,7 +4,7 @@ import { ProjectInfo } from "./ProjectInfo";
 
 export const Proyects = () => {
     return (
-        <main className="pt-15 pb-10 relative ">
+        <main className="pt-15  relative ">
             <div className="-z-20 absolute inset-0 opacity-30 ">
                 <img className=" h-full" src="./PROYECTOS/fondo2.svg" alt="" />
             </div>

@@ -1,0 +1,149 @@
+Opción 1. Cambiar el src (la que ya tienes)
+
+Solo existe una imagen.
+
+<img src={ProyectosInformacion[0].fotos[actual]} />
+
+Los botones hacen:
+
+setActual(actual + 1);
+
+
+
+
+
+
+Opción 2. Cambiar el src + Transiciones CSS
+
+Sigues teniendo una sola imagen.
+
+<img
+    src={...}
+    className="transition-all duration-500"
+/>
+
+{/**<img
+                        src={ProyectosInformacion[0].fotos[actual]}
+                        alt=""
+                        className="w-full h-full object-cover"
+                        draggable={false}
+                    />*/}
+
+
+
+
+
+
+Opción 3. Carrusel con map() (Slide real)
+
+Aquí renderizas todas las imágenes.
+
+{fotos.map((imagen)=>(
+    <img src={imagen}/>
+))}
+
+Luego mueves todo el contenedor.
+
+translateX(...)
+
+o
+
+translateY(...)
+
+
+
+{/*DESPLAZAMIENTO <div className="flex transition-transform duration-1000"
+                        style={{
+                            transform: `translateX(-${actual * 100}%)`
+                        }}
+                    >
+                        {fotos.map((foto, index) => (
+                            <img
+                                key={index}
+                                src={foto}
+                                className="min-w-full h-full object-cover"
+                                draggable={false}
+                            />
+                        ))}
+                    </div>*/}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Opción 4. @keyframes
+
+No necesitas botones.
+
+@keyframes mover{
+    from{}
+    to{}
+}
+
+
+
+
+
+Opción 5. translateY calculando la altura (la profesional)
+
+Esta es la que te iba a enseñar.
+
+React calcula:
+
+altura imagen
+-
+altura contenedor
+=
+recorrido
+
+Entonces hace
+
+transform: translateY(-recorrido)
+
+
+
+
+
+
+Opción 6. Scroll nativo
+
+En lugar de mover la imagen, haces scroll al contenedor.
+
+contenedor.scrollTo(...)
+
+o
+
+scrollTop
+
+
+
+
+
+Opción 7. Librerías (Swiper, Embla, Keen Slider)
+
+Literalmente instalas una librería.
+
+npm install swiper
+
+
+
+
+
+
+Opción 8. Animaciones con Framer Motion
+
+No usas transition, sino Framer Motion.
+
+<motion.img
+    animate={{ y: -500 }}
+/>
