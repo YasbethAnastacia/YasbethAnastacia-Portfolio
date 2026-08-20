@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#fff7f9"/>
+  <rect x="0" y="0" width="1600" height="90" fill="#ffffff"/>
+  <rect x="80" y="32" width="180" height="26" rx="8" fill="#fa9bb9"/>
+  <rect x="80" y="160" width="700" height="56" rx="12" fill="#fa9bb9"/>
+  <rect x="80" y="240" width="560" height="20" rx="8" fill="#f3d5de"/>
+  <rect x="80" y="340" width="220" height="300" rx="20" fill="#ffe4ee"/>
+  <rect x="330" y="340" width="220" height="300" rx="20" fill="#ffe4ee"/>
+  <rect x="580" y="340" width="220" height="300" rx="20" fill="#ffe4ee"/>
+  <rect x="980" y="160" width="520" height="620" rx="28" fill="#ffd3e0"/>
+  <text x="80" y="900" fill="#c46b88" font-family="Georgia, serif" font-size="28">Captura temporal  cámbiala en data.jsx</text>
+</svg>

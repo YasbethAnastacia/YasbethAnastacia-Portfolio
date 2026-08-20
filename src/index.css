@@ -88,4 +88,103 @@ body{
     animation: scrollPage 20s linear infinite alternate;
 }**/
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+}
+
+@keyframes site-fade-up {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes site-fade-left {
+    from { opacity: 0; transform: translateX(-16px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes site-fade-right {
+    from { opacity: 0; transform: translateX(16px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes site-line-grow {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+}
+
+@keyframes site-gallery-in {
+    from {
+        opacity: 0;
+        transform: scale(1.03) translateY(8px);
+        filter: blur(6px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes site-stagger-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes site-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.site-reveal,
+.site-reveal-left,
+.site-reveal-right {
+    opacity: 0;
+}
+
+.site-reveal.is-visible {
+    animation: site-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.site-reveal-left.is-visible {
+    animation: site-fade-left 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.site-reveal-right.is-visible {
+    animation: site-fade-right 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.site-gallery-frame {
+    animation: site-gallery-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.site-stagger-item {
+    animation: site-stagger-in 0.35s ease both;
+}
+
+.site-float {
+    animation: site-float 8s ease-in-out infinite;
+}
+
+.site-timeline-line {
+    transform-origin: top;
+    animation: site-line-grow 0.9s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .site-reveal,
+    .site-reveal.is-visible,
+    .site-reveal-left.is-visible,
+    .site-reveal-right.is-visible,
+    .site-gallery-frame,
+    .site-stagger-item,
+    .site-float,
+    .site-timeline-line {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+}
 

@@ -1,58 +1,61 @@
-const tecnologias = [
-    { id:1, name: "React", icon: "./TECNOLOGIAS/react.svg" },
-    { id:2, name: "JavaScript", icon: "./TECNOLOGIAS/js.svg" },
-    { id:3, name: "HTML", icon: "./TECNOLOGIAS/html5.svg" },
-    { id:4, name: "CSS", icon: "./TECNOLOGIAS/css.svg" },
-    { id:5, name: "Tailwind", icon: "./TECNOLOGIAS/tailwind.svg" },
-    { id:6, name: "VS Code", icon: "./TECNOLOGIAS/vs.svg" },
-    { id:7, name: "C#", icon: "./TECNOLOGIAS/csharp.svg" },
-    { id:8, name: "C++", icon: "./TECNOLOGIAS/cplusplus.svg" },
-    { id:9, name: "Figma", icon: "./TECNOLOGIAS/figma.svg" },
-    { id:10, name: "Git", icon: "./TECNOLOGIAS/git.svg" },
-    { id:11, name: "GitHub", icon: "./TECNOLOGIAS/github.svg" },
-    { id:12, name: "MySQL", icon: "./TECNOLOGIAS/mysql.svg" },
-    { id:13, name: "Python", icon: "./TECNOLOGIAS/python.svg" },
-    { id:14, name: "Vercel", icon: "./TECNOLOGIAS/vercel.svg" },
-    { id:15, name: "Vite", icon: "./TECNOLOGIAS/vite.svg" },
-    { id:16, name: "Tailwind", icon: "./TECNOLOGIAS/tailwind.svg" },
+const placeholder = [
+    "./PROYECTOS/placeholders/01.svg",
+    "./PROYECTOS/placeholders/02.svg",
+    "./PROYECTOS/placeholders/03.svg",
+    "./PROYECTOS/placeholders/04.svg",
 ];
 
-
-
-/*const CroshAmigurumisFotos = [
-    "/PROYECTOS/croshamigurumis/hero.png",
-    "/PROYECTOS/croshamigurumis/intereses.png",
-    "/PROYECTOS/croshamigurumis/intereses-carrusel.png",
-    "/PROYECTOS/croshamigurumis/portada-proyectos.png",
-    "/PROYECTOS/croshamigurumis/proyectos-pollo.png",
-    "/PROYECTOS/croshamigurumis/proyectos-tulipan.png",
-    "/PROYECTOS/croshamigurumis/proyectos-chiva.png",
-    "/PROYECTOS/croshamigurumis/proyectos-enfermera.png",
-    "/PROYECTOS/croshamigurumis/contactame1.png",
-    "/PROYECTOS/croshamigurumis/contactame2.png",
-]
-
-export const ProyectosInformacion=[
+export const projects = [
     {
-        id:1,
-        nombre:"Crosh Amigurumis",
-        descripcion:"Crosh Amigurumis es un proyecto de emprendimiento que se dedica a la creación y venta de amigurumis, que son muñecos tejidos a mano utilizando la técnica del crochet. Estos amigurumis son conocidos por su diseño adorable y detallado, y pueden representar una variedad de personajes, animales y objetos. El proyecto busca ofrecer productos únicos y personalizados para los amantes de los amigurumis y aquellos que buscan regalos especiales.",
-        fotos: CroshAmigurumisFotos,
-        tecnologias:[[1,2,4]],
-        link:"https://croshamigurumis.com/",
-        github:"https://github.com/croshamigurumis"
-    }
-]**/
-
-
-export const ProyectosInformacion=[
+        id: 1,
+        short: "CROSH AMIGURUMIS",
+        title: "Crosh Amigurumis",
+        type: "Tienda / Sitio web",
+        urlLabel: "croshamigurumis.com",
+        description:
+            "Tienda y página web para mostrar amigurumis elaborados a mano. Una experiencia cálida y organizada para descubrir piezas únicas de crochet.",
+        tecnologias: ["React", "Vite", "Tailwind CSS", "JavaScript"],
+        live: "https://croshamigurumis.com/",
+        github: "https://github.com/croshamigurumis",
+        images: placeholder,
+    },
     {
-        id:1,
-        nombre:"Crosh Amigurumis",
-        descripcion:"Crosh Amigurumis es un proyecto de emprendimiento que se dedica a la creación y venta de amigurumis, que son muñecos tejidos a mano utilizando la técnica del crochet. Estos amigurumis son conocidos por su diseño adorable y detallado, y pueden representar una variedad de personajes, animales y objetos. El proyecto busca ofrecer productos únicos y personalizados para los amantes de los amigurumis y aquellos que buscan regalos especiales.",
-        fotos: "/PROYECTOS/croshamigurumis/total.png",
-        tecnologias:[[1,2,4]],
-        link:"https://croshamigurumis.com/",
-        github:"https://github.com/croshamigurumis"
-    }
-]
+        id: 2,
+        short: "CEBALLOS",
+        title: "Ceballos Artículos Religiosos",
+        type: "Sitio web comercial",
+        urlLabel: "ceballos",
+        description:
+            "Página web para una tienda de artículos religiosos: presentación del negocio, catálogo por categorías, rosarios, galería, ubicación, contacto e integración con WhatsApp. Estética oscura, elegante y cálida, con negros, crema y dorados.",
+        tecnologias: ["React", "JavaScript", "Tailwind CSS"],
+        live: "",
+        github: "",
+        images: placeholder,
+    },
+    {
+        id: 3,
+        short: "S. BERMEJO",
+        title: "Sinahi Bermejo — Lashes & Brows",
+        type: "Sitio profesional",
+        urlLabel: "sinahi bermejo",
+        description:
+            "Página profesional para un estudio de pestañas, cejas y micropigmentación. Incluye Hero, Sobre mí, servicios, galería, agenda, ubicación y contacto.",
+        tecnologias: ["React", "JavaScript", "Tailwind CSS"],
+        live: "",
+        github: "",
+        images: placeholder,
+    },
+    {
+        id: 4,
+        short: "PORTAFOLIO",
+        title: "Mi Portafolio",
+        type: "Sitio personal",
+        urlLabel: "anastacia.dev",
+        description:
+            "Mi espacio personal para presentar mi trabajo como Frontend Developer y experimentar con interfaces, motion y experiencias web.",
+        tecnologias: ["React", "Vite", "Tailwind CSS", "JavaScript"],
+        live: "",
+        github: "",
+        images: placeholder,
+    },
+];
