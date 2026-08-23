@@ -60,7 +60,7 @@ export const ProjectGallery = ({ images, title, index, onChange }) => {
                     <span className="w-2.5 h-2.5 rounded-full bg-[#fa9bb9]" />
                     <span className="ml-3 text-[11px] text-zinc-400 truncate">{title}</span>
                 </div>
-                <div className="relative bg-zinc-100 aspect-[16/10] overflow-hidden group">
+                <div className="relative bg-red-500 bg-zinc-100 aaspect-[18/15] overflow-hidden group">
                     <img
                         key={images[index]}
                         src={images[index]}

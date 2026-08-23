@@ -7,10 +7,7 @@ export const About = () => {
 
     return (
         <section id="sobre-mi" className="relative px-5 md:px-10 lg:px-16 pt-12 md:pt-16 pb-12">
-            <div
-                aria-hidden="true"
-                className="site-float pointer-events-none absolute right-[8%] top-10 w-40 h-40 rounded-full bg-[var(--primary-color)] opacity-15 blur-3xl"
-            />
+            <div aria-hidden="true" className="bg-red-500 site-float pointer-events-none absolute right-[8%] top-10 w-40 h-40 rounded-full bg-[var(--primary-color)] opacity-15 blur-3xl " />
 
             <SectionLabel number="01" title="Sobre mí" />
 
@@ -22,7 +19,7 @@ export const About = () => {
                     <div className="absolute w-[280px] h-[280px] md:w-[320px] md:h-[320px] rounded-full bg-[var(--primary-color)] opacity-30 blur-3xl" />
                     <div className="relative z-10 w-[260px] h-[260px] md:w-[320px] md:h-[320px] rounded-full overflow-hidden bg-pink-100 shadow-xl ring-8 ring-white">
                         <img
-                            src="./HERO/foto-personal.png"
+                            src="./HERO/me.jpeg"
                             alt="Retrato de Yasbeth Anastacia Vázquez Hernández"
                             className="w-full h-full object-cover"
                             draggable={false}

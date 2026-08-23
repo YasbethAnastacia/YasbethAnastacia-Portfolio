@@ -1,190 +1,49 @@
 @import "tailwindcss";
 
-:root{
-    --primary-color: #fa9bb9;
-    --secondary-color: #f08bad15;
-    --primary-color-background: #f396b30e;
-    --background:#FFF8F8;
-    --m:#ffffff
+:root {
+  --primary-color: #f472b6;
+  --primary-soft: #fa9bb9;
+  --primary-hover: #ec4899;
+
+  --background: #fff9fa;
+  --background-secondary: #ffffff;
+  --background-card: #ffffff;
+  --background-soft: #fff7f9;
+
+  --text-primary: #27272a;
+  --text-secondary: #52525b;
+  --text-muted: #a1a1aa;
+
+  --border-color: #fce7f3;
+
+  --primary-10: rgb(244 114 182 / 0.1);
+  --primary-20: rgb(244 114 182 / 0.2);
+  --primary-30: rgb(244 114 182 / 0.3);
+  --primary-50: rgb(244 114 182 / 0.5);
+
+  --soft-10: rgb(250 155 185 / 0.1);
+  --soft-20: rgb(250 155 185 / 0.2);
+  --soft-30: rgb(250 155 185 / 0.3);
 }
 
+.dark {
+  --background: #0f0f12;
+  --background-secondary: #17171b;
+  --background-card: #18181c;
+  --background-soft: #202025;
 
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
 
-body{
-    background-color: var(--background);
+  --border-color: rgb(250 155 185 / 0.2);
+
+  --primary-10: rgb(244 114 182 / 0.1);
+  --primary-20: rgb(244 114 182 / 0.2);
+  --primary-30: rgb(244 114 182 / 0.3);
+  --primary-50: rgb(244 114 182 / 0.5);
+
+  --soft-10: rgb(250 155 185 / 0.1);
+  --soft-20: rgb(250 155 185 / 0.2);
+  --soft-30: rgb(250 155 185 / 0.3);
 }
-
-
-@keyframes wave {
-    0%   { transform: rotate(0deg); }
-    15%  { transform: rotate(14deg); }
-    30%  { transform: rotate(-8deg); }
-    45%  { transform: rotate(14deg); }
-    60%  { transform: rotate(-4deg); }
-    75%  { transform: rotate(10deg); }
-    100% { transform: rotate(0deg); }
-}
-
-.wave {
-    display: inline-block;
-    transform-origin: 70% 70%; /* Hace que gire desde la muñeca */
-    animation: wave 1.5s ease-in-out infinite;
-}
-
-/*EFECTO GOMITA
-
-@keyframes gummy {
-    0%,100% {
-        transform: scale(1,1);
-    }
-    25% {
-        transform: scale(1.12,0.88);
-    }
-    50% {
-        transform: scale(0.94,1.06);
-    }
-    75% {
-        transform: scale(1.08,0.92);
-    }
-}
-   **/
-
-@keyframes gummyArrow {
-    0%,100% {
-        transform: scale(1,1);
-    }
-    30% {
-        transform: scaleX(1.18) scaleY(.82);
-    }
-    60% {
-        transform: scaleX(.92) scaleY(1.08);
-    }
-}
-
-
-
-
-
-/* <img
-        ref={imagenRef}
-        src="./PROYECTOS/croshamigurumis/total.png"
-        alt=""
-        className="w-full h-auto animate-scroll"
-        draggable={false}
-        onLoad={handleImageLoad}
-    />
-                    
-    @keyframes scrollPage {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-90%);
-    }
-}
-
-.animate-scroll {
-    animation: scrollPage 20s linear infinite alternate;
-}**/
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 5.5rem;
-}
-
-@keyframes site-fade-up {
-    from { opacity: 0; transform: translateY(18px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes site-fade-left {
-    from { opacity: 0; transform: translateX(-16px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes site-fade-right {
-    from { opacity: 0; transform: translateX(16px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes site-line-grow {
-    from { transform: scaleY(0); }
-    to { transform: scaleY(1); }
-}
-
-@keyframes site-gallery-in {
-    from {
-        opacity: 0;
-        transform: scale(1.03) translateY(8px);
-        filter: blur(6px);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-        filter: blur(0);
-    }
-}
-
-@keyframes site-stagger-in {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes site-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-.site-reveal,
-.site-reveal-left,
-.site-reveal-right {
-    opacity: 0;
-}
-
-.site-reveal.is-visible {
-    animation: site-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.site-reveal-left.is-visible {
-    animation: site-fade-left 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.site-reveal-right.is-visible {
-    animation: site-fade-right 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.site-gallery-frame {
-    animation: site-gallery-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.site-stagger-item {
-    animation: site-stagger-in 0.35s ease both;
-}
-
-.site-float {
-    animation: site-float 8s ease-in-out infinite;
-}
-
-.site-timeline-line {
-    transform-origin: top;
-    animation: site-line-grow 0.9s ease both;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .site-reveal,
-    .site-reveal.is-visible,
-    .site-reveal-left.is-visible,
-    .site-reveal-right.is-visible,
-    .site-gallery-frame,
-    .site-stagger-item,
-    .site-float,
-    .site-timeline-line {
-        animation: none !important;
-        opacity: 1 !important;
-        transform: none !important;
-        filter: none !important;
-    }
-}
-

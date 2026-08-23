@@ -1,5 +1,5 @@
 const placeholder = [
-    "./PROYECTOS/placeholders/01.svg",
+    "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
     "./PROYECTOS/placeholders/02.svg",
     "./PROYECTOS/placeholders/03.svg",
     "./PROYECTOS/placeholders/04.svg",

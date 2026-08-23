@@ -10,10 +10,10 @@ import { Contact } from "./assets/Contact/Contact";
 function App() {
   return (
     <div className="flex flex-col">
+      <Navbar />
       <div id="inicio">
         <Hero />
       </div>
-      <Navbar />
       <About />
       <Experience />
       <Proyects />
