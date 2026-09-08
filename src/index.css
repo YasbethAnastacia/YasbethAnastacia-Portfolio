@@ -1,49 +1,325 @@
 @import "tailwindcss";
 
 :root {
-  --primary-color: #f472b6;
-  --primary-soft: #fa9bb9;
-  --primary-hover: #ec4899;
+    --primary-color: #f472b6;
+    --primary-soft: #fa9bb9;
+    --primary-hover: #ec4899;
 
-  --background: #fff9fa;
-  --background-secondary: #ffffff;
-  --background-card: #ffffff;
-  --background-soft: #fff7f9;
+    --background: #fff9fa;
+    --background-secondary: #ffffff;
+    --background-card: #ffffff;
+    --background-soft: #fff7f9;
 
-  --text-primary: #27272a;
-  --text-secondary: #52525b;
-  --text-muted: #a1a1aa;
+    --text-primary: #27272a;
+    --text-secondary: #52525b;
+    --text-muted: #a1a1aa;
 
-  --border-color: #fce7f3;
+    --border-color: #fce7f3;
 
-  --primary-10: rgb(244 114 182 / 0.1);
-  --primary-20: rgb(244 114 182 / 0.2);
-  --primary-30: rgb(244 114 182 / 0.3);
-  --primary-50: rgb(244 114 182 / 0.5);
+    --primary-10: rgb(244 114 182 / 0.1);
+    --primary-20: rgb(244 114 182 / 0.2);
+    --primary-30: rgb(244 114 182 / 0.3);
+    --primary-50: rgb(244 114 182 / 0.5);
 
-  --soft-10: rgb(250 155 185 / 0.1);
-  --soft-20: rgb(250 155 185 / 0.2);
-  --soft-30: rgb(250 155 185 / 0.3);
+    --soft-10: rgb(250 155 185 / 0.1);
+    --soft-20: rgb(250 155 185 / 0.2);
+    --soft-30: rgb(250 155 185 / 0.3);
 }
 
 .dark {
-  --background: #0f0f12;
-  --background-secondary: #17171b;
-  --background-card: #18181c;
-  --background-soft: #202025;
+    --background: #0f0f12;
+    --background-secondary: #17171b;
+    --background-card: #18181c;
+    --background-soft: #202025;
 
-  --text-primary: #f4f4f5;
-  --text-secondary: #a1a1aa;
-  --text-muted: #71717a;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
 
-  --border-color: rgb(250 155 185 / 0.2);
+    --border-color: rgb(250 155 185 / 0.2);
 
-  --primary-10: rgb(244 114 182 / 0.1);
-  --primary-20: rgb(244 114 182 / 0.2);
-  --primary-30: rgb(244 114 182 / 0.3);
-  --primary-50: rgb(244 114 182 / 0.5);
+    --primary-10: rgb(244 114 182 / 0.1);
+    --primary-20: rgb(244 114 182 / 0.2);
+    --primary-30: rgb(244 114 182 / 0.3);
+    --primary-50: rgb(244 114 182 / 0.5);
 
-  --soft-10: rgb(250 155 185 / 0.1);
-  --soft-20: rgb(250 155 185 / 0.2);
-  --soft-30: rgb(250 155 185 / 0.3);
+    --soft-10: rgb(250 155 185 / 0.1);
+    --soft-20: rgb(250 155 185 / 0.2);
+    --soft-30: rgb(250 155 185 / 0.3);
+}
+
+@keyframes experienceDetail {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+        filter: blur(2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes heroLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes heroRight {
+    from {
+        opacity: 0;
+        transform: translateX(35px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes heroText {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroWave {
+    0%,
+    60%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(16deg);
+    }
+
+    20% {
+        transform: rotate(-12deg);
+    }
+
+    30% {
+        transform: rotate(16deg);
+    }
+
+    40% {
+        transform: rotate(-8deg);
+    }
+
+    50% {
+        transform: rotate(8deg);
+    }
+}
+
+@keyframes heroFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes heroGlow {
+    0%,
+    100% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(1.08);
+    }
+}
+
+@keyframes heroBlob {
+    0%,
+    100% {
+        transform: rotate(6deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(8deg) translateY(-8px);
+    }
+}
+
+@keyframes heroBlobBorder {
+    0%,
+    100% {
+        transform: rotate(-3deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(-5deg) scale(1.02);
+    }
+}
+
+@keyframes heroMiniFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes heroMiniFloatReverse {
+    0%,
+    100% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+@keyframes heroCardFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes aboutGlow {
+    0%,
+    100% {
+        opacity: 0.15;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.25;
+        transform: scale(1.08);
+    }
+}
+
+@keyframes aboutRing {
+    0%,
+    100% {
+        transform: scale(1.1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.13) rotate(4deg);
+    }
+}
+
+@keyframes aboutRingReverse {
+    0%,
+    100% {
+        transform: scale(1.17) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(-4deg);
+    }
+}
+
+@keyframes aboutFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes aboutFloatReverse {
+    0%,
+    100% {
+        transform: translateY(-4px);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+@keyframes aboutCardFloat {
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -6px);
+    }
+}
+
+
+@keyframes experienceDetail {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+        filter: blur(2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes experienceGlow {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 1;
+    }
+}
+
+@keyframes experienceGlowReverse {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-12px) scale(1.08);
+    }
+}
+
+@keyframes experienceBlock {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
