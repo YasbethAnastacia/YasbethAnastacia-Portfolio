@@ -1,31 +1,37 @@
 export const projects = [
-    {
+     {
         id: 1,
-        short: "CROSH AMIGURUMIS",
-        title: "Crosh Amigurumis",
-        type: "Tienda / Sitio web",
-        urlLabel: "croshamigurumis.com",
+        short: "S. BERMEJO",
+        title: "Sinahi Bermejo — Lashes & Brows",
+        type: "Sitio profesional",
+        urlLabel: "sinahi bermejo",
 
         description:
-            "Tienda y página web para mostrar amigurumis elaborados a mano. Una experiencia cálida y organizada para descubrir piezas únicas de crochet.",
+            "Página profesional para un estudio de pestañas, cejas y micropigmentación. Incluye Hero, Sobre mí, servicios, galería, agenda, ubicación y contacto.",
 
         tecnologias: [
             "React",
-            "Vite",
-            "Tailwind CSS",
             "JavaScript",
+            "Tailwind CSS",
         ],
 
-        live: "https://croshamigurumis.com/",
-        github: "https://github.com/croshamigurumis",
+        live: "https://tusitio-sinahi.com/",
+        github: "https://github.com/tuusuario/sinahi-bermejo",
 
         images: [
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
+            "./PROYECTOS/sinahi/a.png",
+            "./PROYECTOS/sinahi/b.png",
+            "./PROYECTOS/sinahi/c.png",
+            "./PROYECTOS/sinahi/d.png",
+            "./PROYECTOS/sinahi/e.png",
+            "./PROYECTOS/sinahi/f.png",
+            "./PROYECTOS/sinahi/g.png",
+            "./PROYECTOS/sinahi/h.png",
+            "./PROYECTOS/sinahi/i.png",
+            
         ],
     },
+    
 
     {
         id: 2,
@@ -47,34 +53,48 @@ export const projects = [
         github: "https://github.com/tuusuario/ceballos",
 
         images: [
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
+            "./PROYECTOS/ceballos/a.png",
+            "./PROYECTOS/ceballos/b.png",
+            "./PROYECTOS/ceballos/c.png",
+            "./PROYECTOS/ceballos/d.png",
+            "./PROYECTOS/ceballos/e.png",
+            "./PROYECTOS/ceballos/f.png",
         ],
     },
 
     {
         id: 3,
-        short: "S. BERMEJO",
-        title: "Sinahi Bermejo — Lashes & Brows",
-        type: "Sitio profesional",
-        urlLabel: "sinahi bermejo",
+        short: "CROSH AMIGURUMIS",
+        title: "Crosh Amigurumis",
+        type: "Tienda / Sitio web",
+        urlLabel: "croshamigurumis.com",
 
         description:
-            "Página profesional para un estudio de pestañas, cejas y micropigmentación. Incluye Hero, Sobre mí, servicios, galería, agenda, ubicación y contacto.",
+            "Tienda y página web para mostrar amigurumis elaborados a mano. Una experiencia cálida y organizada para descubrir piezas únicas de crochet.",
 
         tecnologias: [
             "React",
-            "JavaScript",
+            "Vite",
             "Tailwind CSS",
+            "JavaScript",
         ],
 
-        live: "https://tusitio-sinahi.com/",
-        github: "https://github.com/tuusuario/sinahi-bermejo",
+        live: "https://croshamigurumis.com/",
+        github: "https://github.com/croshamigurumis",
 
         images: [
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
+            "./PROYECTOS/croshamigurumis/a.png",
+            "./PROYECTOS/croshamigurumis/b.png",
+            "./PROYECTOS/croshamigurumis/c.png",
+            "./PROYECTOS/croshamigurumis/d.png",      
+            "./PROYECTOS/croshamigurumis/e.png",
+            "./PROYECTOS/croshamigurumis/f.png",
+            "./PROYECTOS/croshamigurumis/g.png",
+            "./PROYECTOS/croshamigurumis/h.png",   
+            "./PROYECTOS/croshamigurumis/i.png",  
+            "./PROYECTOS/croshamigurumis/j.png",  
+             
+
         ],
     },
 

@@ -40,7 +40,7 @@ export const ProjectGallery = ({ images, title, index, onChange }) => {
 
     return (
         <div
-            className="flex flex-col gap-5"
+            className=" flex flex-col gap-5"
             tabIndex={0}
             onKeyDown={(event) => {
                 if (event.key === "ArrowLeft") {
@@ -60,7 +60,7 @@ export const ProjectGallery = ({ images, title, index, onChange }) => {
                     <span className="w-2.5 h-2.5 rounded-full bg-[#fa9bb9]" />
                     <span className="ml-3 text-[11px] text-zinc-400 truncate">{title}</span>
                 </div>
-                <div className="relative bg-red-500 bg-zinc-100 aaspect-[18/15] overflow-hidden group">
+                <div className="h-[380px] relative bg-red-500 bg-zinc-100 aaspect-[18/15] overflow-hidden group">
                     <img
                         key={images[index]}
                         src={images[index]}
