@@ -9,8 +9,8 @@
 @keyframes projectInfo { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes projectGallery { from { opacity: 0; transform: translateX(22px) scale(0.985); } to { opacity: 1; transform: translateX(0) scale(1); } }
 .dark .projects-background { opacity: 0; }
-:root { --text-accent: #b32d70; --text-muted: #66616a; --on-primary: #27272a; color-scheme: light; }
-.dark { --text-accent: var(--primary-color); --text-secondary: #c3bec8; --text-muted: #aaa4b1; color-scheme: dark; }
+:root { --text-accent: var(--primary-color); --on-primary: #ffffff; color-scheme: light; }
+.dark { color-scheme: dark; }
 html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 body { margin: 0; background: var(--background); color: var(--text-primary); font-family: ui-sans-serif, system-ui, sans-serif; }
 main,
