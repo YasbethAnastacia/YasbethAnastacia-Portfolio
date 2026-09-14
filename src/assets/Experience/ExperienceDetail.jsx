@@ -1,29 +1,23 @@
 import { useLanguage } from "../../hooks/useLanguage";
 export const ExperienceDetail = ({ experiencia, compact = false }) => {
   const { t } = useLanguage();
+  if (!experiencia) return <p className="py-12 text-[var(--text-secondary)]">{t("Selecciona una experiencia para ver más información.")}</p>;
   const ExtraIcono = experiencia.seccionExtra.icono;
-
   return (
     <article key={experiencia.id} className={`site-gallery-frame transition-colors duration-500 ${compact ? "pt-2" : "pt-1"}`}>
       <div className="animate-[experienceBlock_450ms_ease-out_both] transition-colors duration-500">
-        <p className="text-xs tracking-[0.25em] text-[var(--primary-soft)] mb-3 transition-colors duration-500">{t("DETALLE")}</p>
-
-        <h3 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] leading-tight transition-colors duration-500">{t(experiencia.puesto)}</h3>
-
-        <p className="text-lg text-[var(--primary-color)] font-medium mt-1 transition-colors duration-500">{t(experiencia.empresa)}</p>
-
+        <p className="text-xs tracking-[0.25em] text-[var(--text-accent)] mb-3 transition-colors duration-500">{t("DETALLE")}</p>
+        <h3 className="text-xl md:text-2xl font-bold text-[var(--text-primary)] leading-tight transition-colors duration-500">{t(experiencia.puesto)}</h3>
+        <p className="text-lg text-[var(--text-accent)] font-medium mt-1 transition-colors duration-500">{t(experiencia.empresa)}</p>
         <p className="text-sm text-[var(--text-muted)] mt-2 leading-relaxed transition-colors duration-500">
           {t(experiencia.fecha)} · {t(experiencia.ubicacion)} · {t(experiencia.tipo)}
         </p>
       </div>
-
       <p className="text-[var(--text-secondary)] leading-relaxed mt-6 max-w-xl animate-[experienceBlock_500ms_ease-out_both] transition-colors duration-500">
         {t(experiencia.descripcion)}
       </p>
-
       <div className="mt-8 animate-[experienceBlock_550ms_ease-out_both] transition-colors duration-500">
         <h4 className="text-sm tracking-[0.2em] uppercase text-[var(--text-muted)] mb-4 transition-colors duration-500">{t("Responsabilidades")}</h4>
-
         <ul className="flex flex-col gap-3">
           {experiencia.responsabilidades.map((item, index) => (
             <li
@@ -34,20 +28,16 @@ export const ExperienceDetail = ({ experiencia, compact = false }) => {
               }}
             >
               <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--primary-color)] transition-all duration-300 group-hover:scale-150" />
-
               <span>{t(item)}</span>
             </li>
           ))}
         </ul>
       </div>
-
       <div className="mt-8 animate-[experienceBlock_600ms_ease-out_both] transition-colors duration-500">
         <h4 className="text-sm tracking-[0.2em] uppercase text-[var(--text-muted)] mb-4 flex items-center gap-2 transition-colors duration-500">
-          <ExtraIcono className="w-4 h-4 text-[var(--primary-color)] transition-transform duration-300 hover:scale-110" />
-
+          <ExtraIcono className="w-4 h-4 text-[var(--text-accent)] transition-transform duration-300 hover:scale-110" />
           {t(experiencia.seccionExtra.titulo)}
         </h4>
-
         <ul className="flex flex-col gap-3">
           {experiencia.seccionExtra.contenido.map((item, index) => (
             <li
@@ -58,21 +48,17 @@ export const ExperienceDetail = ({ experiencia, compact = false }) => {
               }}
             >
               <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--primary-color)] transition-all duration-300 group-hover:scale-150" />
-
               <span>{item}</span>
             </li>
           ))}
         </ul>
       </div>
-
       {experiencia.tecnologias?.length > 0 && (
         <div className="mt-8 animate-[experienceBlock_650ms_ease-out_both] transition-colors duration-500">
           <h4 className="text-sm tracking-[0.2em] uppercase text-[var(--text-muted)] mb-4 transition-colors duration-500">{t("Tecnologías")}</h4>
-
           <div className="flex flex-wrap gap-2.5">
             {experiencia.tecnologias.map((tecnologia, index) => {
               const TecnologiaIcono = tecnologia.icono;
-
               return (
                 <div
                   key={`${t(tecnologia.nombre)}-${index}`}
@@ -80,9 +66,8 @@ export const ExperienceDetail = ({ experiencia, compact = false }) => {
                 >
                   <TecnologiaIcono
                     size={15}
-                    className="text-[var(--primary-color)] transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3"
+                    className="text-[var(--text-accent)] transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3"
                   />
-
                   <span>{t(tecnologia.nombre)}</span>
                 </div>
               );
