@@ -1,115 +1,103 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useRef } from "react";
-
-const pad = (value) => String(value).padStart(2, "0");
-
-export const ProjectGallery = ({ images, title, index, onChange }) => {
-    const total = images.length;
-    const inView = useRef(false);
-
-    const go = (direction) => {
-        if (direction === "prev") {
-            onChange(index === 0 ? total - 1 : index - 1);
-        } else {
-            onChange(index === total - 1 ? 0 : index + 1);
+import { ChevronLeft, ChevronRight, Laptop, Smartphone } from "lucide-react";
+import { useState } from "react";
+import { useLanguage } from "../../hooks/useLanguage";
+export const ProjectGallery = ({ images, mobileImages, title, index, onChange }) => {
+  const { t } = useLanguage();
+  const [device, setDevice] = useState("laptop");
+  const mobile = device === "mobile",
+    shots = mobile ? mobileImages : images,
+    total = shots.length;
+  const current = Math.min(index, Math.max(0, total - 1));
+  const go = (step) => {
+    if (total > 1) onChange((current + step + total) % total);
+  };
+  return (
+    <div
+      className="flex flex-col gap-4 min-w-0"
+      role="region"
+      aria-label={t("Capturas del proyecto")}
+      tabIndex={0}
+      onKeyDown={(event) => {
+        if (event.target.closest("[data-devices]")) return;
+        if (["ArrowLeft", "ArrowRight"].includes(event.key)) {
+          event.preventDefault();
+          go(event.key === "ArrowLeft" ? -1 : 1);
         }
-    };
-
-    useEffect(() => {
-        const section = document.getElementById("proyectos");
-        if (!section) return;
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                inView.current = entry.isIntersecting;
-            },
-            { threshold: 0.25 }
-        );
-        observer.observe(section);
-        return () => observer.disconnect();
-    }, []);
-
-    useEffect(() => {
-        const onKey = (event) => {
-            if (!inView.current) return;
-            if (event.key === "ArrowLeft") go("prev");
-            if (event.key === "ArrowRight") go("next");
-        };
-        window.addEventListener("keydown", onKey);
-        return () => window.removeEventListener("keydown", onKey);
-    }, [index, total]);
-
-    return (
-        <div
-            className=" flex flex-col gap-5"
-            tabIndex={0}
-            onKeyDown={(event) => {
-                if (event.key === "ArrowLeft") {
-                    event.preventDefault();
-                    go("prev");
-                }
-                if (event.key === "ArrowRight") {
-                    event.preventDefault();
-                    go("next");
-                }
+      }}
+    >
+      <div data-devices role="group" aria-label={t("Dispositivo de la galería")} className="flex justify-center gap-2">
+        {[
+          { id: "laptop", label: "Laptop", Icon: Laptop },
+          { id: "mobile", label: "Celular", Icon: Smartphone },
+        ].map(({ id, label, Icon }) => (
+          <button
+            type="button"
+            key={id}
+            aria-pressed={device === id}
+            onClick={() => {
+              setDevice(id);
+              onChange(0);
             }}
-        >
-            <div className="rounded-2xl overflow-hidden bg-white shadow-[0_20px_50px_rgba(250,155,185,0.18)] border border-pink-100/80">
-                <div className="flex items-center gap-2 px-4 py-2.5 bg-pink-50/80">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#ffb3c7]" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#ffd3e0]" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#fa9bb9]" />
-                    <span className="ml-3 text-[11px] text-zinc-400 truncate">{title}</span>
-                </div>
-                <div className="h-[380px] relative bg-red-500 bg-zinc-100 aaspect-[18/15] overflow-hidden group">
-                    <img
-                        key={images[index]}
-                        src={images[index]}
-                        alt={`${title}, captura ${index + 1} de ${total}`}
-                        className="site-gallery-frame w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-                        draggable={false}
-                    />
-                </div>
-            </div>
-
-            <div className="flex items-center justify-center gap-6">
-                <button
-                    type="button"
-                    onClick={() => go("prev")}
-                    aria-label="Captura anterior"
-                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--primary-color)] text-white shadow-md transition-all duration-300 hover:shadow-[0_0_18px_#fa9bb9] hover:-translate-x-0.5 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary-color)]"
-                >
-                    <ChevronLeft />
-                </button>
-
-                <p className="text-sm tracking-[0.2em] text-zinc-500 font-medium tabular-nums">
-                    {pad(index + 1)} / {pad(total)}
-                </p>
-
-                <button
-                    type="button"
-                    onClick={() => go("next")}
-                    aria-label="Captura siguiente"
-                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--primary-color)] text-white shadow-md transition-all duration-300 hover:shadow-[0_0_18px_#fa9bb9] hover:translate-x-0.5 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary-color)]"
-                >
-                    <ChevronRight />
-                </button>
-            </div>
-
-            <div className="flex justify-center gap-2" role="tablist" aria-label="Capturas del proyecto">
-                {images.map((image, i) => (
-                    <button
-                        key={image + i}
-                        type="button"
-                        role="tab"
-                        aria-selected={i === index}
-                        aria-label={`Ir a la captura ${i + 1}`}
-                        onClick={() => onChange(i)}
-                        className={`h-1.5 rounded-full transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary-color)] ${
-                            i === index ? "w-7 bg-[var(--primary-color)]" : "w-2.5 bg-pink-200 hover:bg-pink-300"
-                        }`}
-                    />
-                ))}
-            </div>
+            className={"device-button " + (device === id ? "selected" : "")}
+          >
+            <Icon size={17} />
+            {t(label)}
+          </button>
+        ))}
+      </div>
+      <div className="gallery-stage">
+        <div className={"gallery-mockup " + (mobile ? "phone" : "laptop")}>
+          <div className="gallery-chrome" aria-hidden="true">
+            {mobile ? (
+              <span className="phone-speaker" />
+            ) : (
+              <>
+                <span />
+                <span />
+                <span />
+                <small>{title}</small>
+              </>
+            )}
+          </div>
+          <div className="gallery-screen">
+            {total > 0 && (
+              <img
+                key={shots[current] + device}
+                src={shots[current]}
+                alt={title + ", " + t("captura") + " " + (current + 1) + " " + t("de") + " " + total}
+                className="w-full h-full object-cover object-top animate-[experienceDetail_350ms_ease-out]"
+                loading="lazy"
+                draggable={false}
+              />
+            )}
+          </div>
         </div>
-    );
+      </div>
+      <div className="flex items-center justify-center gap-6">
+        <button type="button" onClick={() => go(-1)} disabled={total < 2} aria-label={t("Captura anterior")} className="gallery-arrow">
+          <ChevronLeft />
+        </button>
+        <p className="text-sm tracking-[0.2em] text-[var(--text-secondary)] tabular-nums" aria-live="polite" aria-atomic="true">
+          {String(total ? current + 1 : 0).padStart(2, "0")} / {String(total).padStart(2, "0")}
+        </p>
+        <button type="button" onClick={() => go(1)} disabled={total < 2} aria-label={t("Captura siguiente")} className="gallery-arrow">
+          <ChevronRight />
+        </button>
+      </div>
+      <div className="flex flex-wrap justify-center" role="group" aria-label={t("Capturas del proyecto")}>
+        {shots.map((shot, i) => (
+          <button
+            type="button"
+            key={shot}
+            onClick={() => onChange(i)}
+            aria-pressed={i === current}
+            aria-label={t("Ir a la captura") + " " + (i + 1)}
+            className="gallery-dot"
+          >
+            <span className={i === current ? "selected" : ""} />
+          </button>
+        ))}
+      </div>
+    </div>
+  );
 };

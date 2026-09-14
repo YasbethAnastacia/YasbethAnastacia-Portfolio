@@ -6,25 +6,26 @@ import { Experience } from "./assets/Experience/Experience";
 import { Proyects } from "./assets/Proyects/proyects";
 import { Technologies } from "./assets/Technologies/Technologies";
 import { Contact } from "./assets/Contact/Contact";
+import { ThemeProvider } from "./Context/ThemeContext";
 import { LanguageProvider } from "./Context/LanguageContext";
-
 function App() {
-    return (
-        <LanguageProvider>
-            <div className="flex flex-col">
-                <Navbar />
-                <div id="inicio">
-                    <Hero />
-                </div>
-                <About />
-                <Experience />
-                <Proyects />
-                <Technologies />
-                <Contact />
-                <Footer />
-            </div>
-        </LanguageProvider>
-    );
+  return (
+    <LanguageProvider>
+      <ThemeProvider>
+        <div className="flex flex-col">
+          <Navbar />
+          <main id="contenido">
+            <Hero />
+            <About />
+            <Experience />
+            <Proyects />
+            <Technologies />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </ThemeProvider>
+    </LanguageProvider>
+  );
 }
-
 export default App;

@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content="Portafolio de Yasbeth Anastacia, ingeniera mecatrónica y desarrolladora frontend. Proyectos, experiencia y contacto." />
+    <script>
+      try {
+        const theme = localStorage.getItem("theme");
+        document.documentElement.classList.toggle("dark", theme === "dark" || (theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches));
+        document.documentElement.lang = localStorage.getItem("language") === "en" ? "en" : "es";
+      } catch {
+        document.documentElement.classList.toggle("dark", matchMedia("(prefers-color-scheme: dark)").matches);
+      }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anastacia — Frontend Developer</title>
   </head>

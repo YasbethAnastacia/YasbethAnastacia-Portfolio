@@ -1,129 +1,81 @@
 export const projects = [
-     {
-        id: 1,
-        short: "S. BERMEJO",
-        title: "Sinahi Bermejo — Lashes & Brows",
-        type: "Sitio profesional",
-        urlLabel: "sinahi bermejo",
-
-        description:
-            "Página profesional para un estudio de pestañas, cejas y micropigmentación. Incluye Hero, Sobre mí, servicios, galería, agenda, ubicación y contacto.",
-
-        tecnologias: [
-            "React",
-            "JavaScript",
-            "Tailwind CSS",
-        ],
-
-        live: "https://tusitio-sinahi.com/",
-        github: "https://github.com/tuusuario/sinahi-bermejo",
-
-        images: [
-            "./PROYECTOS/sinahi/a.png",
-            "./PROYECTOS/sinahi/b.png",
-            "./PROYECTOS/sinahi/c.png",
-            "./PROYECTOS/sinahi/d.png",
-            "./PROYECTOS/sinahi/e.png",
-            "./PROYECTOS/sinahi/f.png",
-            "./PROYECTOS/sinahi/g.png",
-            "./PROYECTOS/sinahi/h.png",
-            "./PROYECTOS/sinahi/i.png",
-            
-        ],
-    },
-    
-
-    {
-        id: 2,
-        short: "CEBALLOS",
-        title: "Ceballos Artículos Religiosos",
-        type: "Sitio web comercial",
-        urlLabel: "ceballos",
-
-        description:
-            "Página web para una tienda de artículos religiosos: presentación del negocio, catálogo por categorías, rosarios, galería, ubicación, contacto e integración con WhatsApp. Estética oscura, elegante y cálida, con negros, crema y dorados.",
-
-        tecnologias: [
-            "React",
-            "JavaScript",
-            "Tailwind CSS",
-        ],
-
-        live: "https://tusitio-ceballos.com/",
-        github: "https://github.com/tuusuario/ceballos",
-
-        images: [
-            "./PROYECTOS/ceballos/a.png",
-            "./PROYECTOS/ceballos/b.png",
-            "./PROYECTOS/ceballos/c.png",
-            "./PROYECTOS/ceballos/d.png",
-            "./PROYECTOS/ceballos/e.png",
-            "./PROYECTOS/ceballos/f.png",
-        ],
-    },
-
-    {
-        id: 3,
-        short: "CROSH AMIGURUMIS",
-        title: "Crosh Amigurumis",
-        type: "Tienda / Sitio web",
-        urlLabel: "croshamigurumis.com",
-
-        description:
-            "Tienda y página web para mostrar amigurumis elaborados a mano. Una experiencia cálida y organizada para descubrir piezas únicas de crochet.",
-
-        tecnologias: [
-            "React",
-            "Vite",
-            "Tailwind CSS",
-            "JavaScript",
-        ],
-
-        live: "https://croshamigurumis.com/",
-        github: "https://github.com/croshamigurumis",
-
-        images: [
-            "./PROYECTOS/croshamigurumis/a.png",
-            "./PROYECTOS/croshamigurumis/b.png",
-            "./PROYECTOS/croshamigurumis/c.png",
-            "./PROYECTOS/croshamigurumis/d.png",      
-            "./PROYECTOS/croshamigurumis/e.png",
-            "./PROYECTOS/croshamigurumis/f.png",
-            "./PROYECTOS/croshamigurumis/g.png",
-            "./PROYECTOS/croshamigurumis/h.png",   
-            "./PROYECTOS/croshamigurumis/i.png",  
-            "./PROYECTOS/croshamigurumis/j.png",  
-             
-
-        ],
-    },
-
-    {
-        id: 4,
-        short: "PORTAFOLIO",
-        title: "Mi Portafolio",
-        type: "Sitio personal",
-        urlLabel: "anastacia.dev",
-
-        description:
-            "Mi espacio personal para presentar mi trabajo como Frontend Developer y experimentar con interfaces, motion y experiencias web.",
-
-        tecnologias: [
-            "React",
-            "Vite",
-            "Tailwind CSS",
-            "JavaScript",
-        ],
-
-        live: "https://anastacia.dev/",
-        github: "https://github.com/tuusuario/portafolio",
-
-        images: [
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
-            "./PROYECTOS/croshamigurumis/proyectos-tulipan.png",
-        ],
-    },
-];
+  {
+    id: 1,
+    short: "S. BERMEJO",
+    title: "Sinahi Bermejo — Lashes & Brows",
+    type: "Sitio profesional",
+    urlLabel: "sinahibermejo.com",
+    description:
+      "Página profesional para un estudio de pestañas, cejas y micropigmentación. Incluye Hero, Sobre mí, servicios, galería, agenda, ubicación y contacto.",
+    tecnologias: ["React", "JavaScript", "Tailwind CSS"],
+    live: "https://sinahibermejo.com/",
+    github: null,
+    images: [
+      "/PROYECTOS/sinahi/a.png",
+      "/PROYECTOS/sinahi/b.png",
+      "/PROYECTOS/sinahi/c.png",
+      "/PROYECTOS/sinahi/d.png",
+      "/PROYECTOS/sinahi/e.png",
+      "/PROYECTOS/sinahi/f.png",
+      "/PROYECTOS/sinahi/g.png",
+      "/PROYECTOS/sinahi/h.png",
+      "/PROYECTOS/sinahi/i.png",
+    ],
+  },
+  {
+    id: 2,
+    short: "CEBALLOS",
+    title: "Ceballos Artículos Religiosos",
+    type: "Sitio web comercial",
+    urlLabel: "religiososceballos.com",
+    description:
+      "Página web para una tienda de artículos religiosos: presentación del negocio, catálogo por categorías, rosarios, galería, ubicación, contacto e integración con WhatsApp. Estética oscura, elegante y cálida, con negros, crema y dorados.",
+    tecnologias: ["React", "JavaScript", "Tailwind CSS"],
+    live: "https://religiososceballos.com/",
+    github: null,
+    images: [
+      "/PROYECTOS/ceballos/a.png",
+      "/PROYECTOS/ceballos/b.png",
+      "/PROYECTOS/ceballos/c.png",
+      "/PROYECTOS/ceballos/d.png",
+      "/PROYECTOS/ceballos/e.png",
+      "/PROYECTOS/ceballos/f.png",
+    ],
+  },
+  {
+    id: 3,
+    short: "CROSH AMIGURUMIS",
+    title: "Crosh Amigurumis",
+    type: "Tienda / Sitio web",
+    urlLabel: "crosh-amigurumis.vercel.app",
+    description: "Tienda y página web para mostrar amigurumis elaborados a mano. Una experiencia cálida y organizada para descubrir piezas únicas de crochet.",
+    tecnologias: ["React", "Vite", "Tailwind CSS", "JavaScript"],
+    live: "https://crosh-amigurumis.vercel.app/",
+    github: null,
+    images: [
+      "/PROYECTOS/croshamigurumis/a.png",
+      "/PROYECTOS/croshamigurumis/b.png",
+      "/PROYECTOS/croshamigurumis/c.png",
+      "/PROYECTOS/croshamigurumis/d.png",
+      "/PROYECTOS/croshamigurumis/e.png",
+      "/PROYECTOS/croshamigurumis/f.png",
+      "/PROYECTOS/croshamigurumis/g.png",
+      "/PROYECTOS/croshamigurumis/h.png",
+      "/PROYECTOS/croshamigurumis/i.png",
+      "/PROYECTOS/croshamigurumis/j.png",
+      "/PROYECTOS/croshamigurumis/k.png",
+    ],
+  },
+  {
+    id: 4,
+    short: "PORTAFOLIO",
+    title: "Mi Portafolio",
+    type: "Sitio personal",
+    urlLabel: "yasbeth.com",
+    description: "Mi espacio personal para presentar mi trabajo como Frontend Developer y experimentar con interfaces, motion y experiencias web.",
+    tecnologias: ["React", "Vite", "Tailwind CSS", "JavaScript"],
+    live: "https://yasbeth.com/",
+    github: "https://github.com/YasbethAnastacia/YasbethAnastacia-Portfolio",
+    images: ["/PROYECTOS/portafolio/inicio.png"],
+  },
+].map((project) => ({ ...project, mobileImages: [...project.images] }));
