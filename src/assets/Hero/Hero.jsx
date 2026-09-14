@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { ChevronRight, Mail } from "lucide-react";
 import { translations } from "../../data/translations";
 import { useLanguage } from "../../hooks/useLanguage";
@@ -18,9 +19,56 @@ const tecnologias = [
   { id: 14, name: "Vercel", icon: "/TECNOLOGIAS/vercel.svg" },
   { id: 15, name: "Vite", icon: "/TECNOLOGIAS/vite.svg" },
 ];
+const tecnologiasDuplicadas = [...tecnologias, ...tecnologias];
 export const Hero = () => {
+  const trackRef = useRef(null);
   const { language } = useLanguage();
   const t = translations[language]?.hero ?? translations.es.hero;
+  useEffect(() => {
+    const track = trackRef.current;
+
+    if (!track) return;
+
+    const reducirMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    if (reducirMovimiento.matches) return;
+
+    let animationFrame;
+    let offset = 0;
+    let mitad = track.scrollWidth / 2;
+    let tiempoAnterior = performance.now();
+
+    const actualizarMedidas = () => {
+      mitad = track.scrollWidth / 2;
+    };
+
+    const resizeObserver = new ResizeObserver(actualizarMedidas);
+
+    resizeObserver.observe(track);
+
+    const mover = (tiempoActual) => {
+      const delta = tiempoActual - tiempoAnterior;
+
+      tiempoAnterior = tiempoActual;
+      offset += delta * 0.03;
+
+      if (offset >= mitad) {
+        offset -= mitad;
+      }
+
+      track.style.transform = `translate3d(-${offset}px, 0, 0)`;
+
+      animationFrame = requestAnimationFrame(mover);
+    };
+
+    animationFrame = requestAnimationFrame(mover);
+
+    return () => {
+      cancelAnimationFrame(animationFrame);
+      resizeObserver.disconnect();
+    };
+  }, []);
+
   const irASeccion = (id) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
@@ -63,16 +111,17 @@ export const Hero = () => {
           className="bg-[var(--background-card)] border border-[var(--border-color)] rounded-2xl shadow-lg py-3 w-full max-w-[400px] overflow-hidden transition-all duration-500 animate-[heroText_700ms_cubic-bezier(0.22,1,0.36,1)_both]"
           style={{ animationDelay: "420ms" }}
         >
-          <div className="flex gap-5 overflow-x-auto px-3 py-1" tabIndex={0} aria-label={language === "es" ? "Tecnologías" : "Technologies"}>
-            {tecnologias.map((tecnologia, index) => (
+          <div ref={trackRef} className="flex gap-5 w-max will-change-transform" aria-label={language === "es" ? "Tecnologías" : "Technologies"}>
+            {tecnologiasDuplicadas.map((tecnologia, index) => (
               <div
                 key={`${tecnologia.id}-${index}`}
+                aria-hidden={index >= tecnologias.length}
                 className="group flex items-center justify-center w-[60px] h-[60px] rounded-xl bg-[var(--background-soft)] border border-[var(--border-color)] shrink-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
               >
                 <img
                   className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110"
                   src={tecnologia.icon}
-                  alt={tecnologia.name}
+                  alt={index < tecnologias.length ? tecnologia.name : ""}
                   draggable={false}
                 />
               </div>
