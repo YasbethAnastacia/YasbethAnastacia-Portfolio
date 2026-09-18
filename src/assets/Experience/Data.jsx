@@ -2,7 +2,7 @@ import { Brain, Trophy, Wrench, Monitor, Cpu, PencilRuler, Cable, Printer, FileC
 export const Experiencias = [
   {
     id: 4,
-    puesto: "Frontend Developer Jr.",
+    puesto: "Frontend Developer",
     empresa: "Proyectos Personales",
     ubicacion: "Remoto",
     fecha: "Junio 2025 – Actualidad",

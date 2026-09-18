@@ -26,5 +26,7 @@ export const ThemeProvider = ({ children }) => {
       localStorage.setItem("theme", next ? "dark" : "light");
     } catch {}
   };
-  return <ThemeContext.Provider value={{ darkMode, toggleTheme }}>{children}</ThemeContext.Provider>;
+  return <ThemeContext.Provider value={{ darkMode, toggleTheme }}>
+    {children}
+  </ThemeContext.Provider>;
 };

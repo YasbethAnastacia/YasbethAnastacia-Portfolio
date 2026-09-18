@@ -47,7 +47,7 @@ export const english = {
     "Shop and website showcasing handmade amigurumi. A warm, organized experience for discovering unique crochet pieces.",
   "Mi espacio personal para presentar mi trabajo como Frontend Developer y experimentar con interfaces, motion y experiencias web.":
     "My personal space to showcase my work as a Frontend Developer and experiment with interfaces, animation and web experiences.",
-  "Frontend Developer Jr.": "Junior Frontend Developer",
+
   "Proyectos Personales": "Personal Projects",
   Remoto: "Remote",
   "Junio 2025 – Actualidad": "June 2025 – Present",

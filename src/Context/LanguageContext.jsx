@@ -18,5 +18,7 @@ export const LanguageProvider = ({ children }) => {
     } catch {}
   }, [language]);
   const t = (text) => (language === "en" ? (english[text] ?? text) : text);
-  return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>;
+  return <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    {children}
+  </LanguageContext.Provider>;
 };

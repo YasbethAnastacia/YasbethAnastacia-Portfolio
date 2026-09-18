@@ -41,9 +41,7 @@ export const Technologies = () => {
     <section id="tecnologias" className="px-5 md:px-10 lg:px-16 pt-6 md:pt-10 pb-12">
       <SectionLabel number="04" title={t("Habilidades")} />
       <div ref={ref} className={`site-reveal flex flex-col gap-10 ${visible ? "is-visible" : ""}`}>
-        {categorias.map((grupo, index) => (
-          <TechGroup key={grupo.titulo} grupo={grupo} delay={index * 80} />
-        ))}
+        {categorias.map((grupo, index) => <TechGroup key={grupo.titulo} grupo={grupo} delay={index * 80} />)}
       </div>
     </section>
   );
