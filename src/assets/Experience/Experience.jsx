@@ -30,7 +30,7 @@ export const Experience = () => {
           {t("Experiencia, aprendizaje y proyectos que han formado mi camino")}
         </h2>
         <p className="mt-4 max-w-3xl text-base md:text-lg leading-relaxed text-[var(--text-secondary)] transition-colors duration-500">
-          {t("Aquí puedes explorar las etapas más importantes de mi desarrollo profesional, desde automatización e ingeniería hasta mi enfoque actual en desarrollo web frontend.")}
+          {t("Aquí puedes explorar mi trayectoria en desarrollo de software y automatización, con experiencia en creación de aplicaciones, integración de servicios y resolución de problemas técnicos.")}
         </p>
       </div>
       <div ref={ref} className={`transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
